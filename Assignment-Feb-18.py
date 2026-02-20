@@ -1,10 +1,10 @@
 # square pattern
 
-# n=int(input("Enter n value:"))
-# for j in range(n):
-#     for i in range(n):
-#         print("*",end=" ")
-#     print()
+n=int(input("Enter n value:"))
+for j in range(n):
+    for i in range(n):
+        print("*",end=" ")
+    print()
 
 #OUTPUT:
 # Enter n value:5
@@ -16,11 +16,11 @@
 
 # Rectangle pattern
 
-# n=int(input("Enter n value:"))
-# for j in range(n):
-#     for i in range(n*2):
-#         print("*",end=" ")
-#     print()
+n=int(input("Enter n value:"))
+for j in range(n):
+    for i in range(n*2):
+        print("*",end=" ")
+    print()
 
 # OUTPUT:
 # Enter n value:5
@@ -34,41 +34,69 @@
 
 n=int(input("Enter n value:"))
 
-for j in range(1,n+1):
-    for i in range(1,n+1):
+for i in range(1,n+1):
+    for j in range(1,n+1):
         if i==1 or j==1 or i==n or j==n:
             print("*",end=" ")
         else:
             print(" ",end=" ")
     print()
 
+# OUTPUT:
+# Enter n value:7
+# * * * * * * * 
+# *           * 
+# *           * 
+# *           * 
+# *           * 
+# *           * 
+# * * * * * * * 
+
+#Hollow Rectangle
+
+n=int(input("Enter n value:"))
+for i in range(1,n+1):
+    for j in range(1,n*2):
+        if i==1 or j==1 or i==n or j==(n*2-1):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+# OUTPUT:
+# Enter n value:5
+# * * * * * * * * * 
+# *               * 
+# *               * 
+# *               * 
+# * * * * * * * * *
 
 #Nearest prime number
 
-# def Check_prime(n):
-#     if n<2:
-#         return False
-#     for i in range(2,n):
-#         if n%i==0:
-#             return False
-#     return True
+def Check_prime(n):
+    if n<2:
+        return False
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
 
-# n=int(input("Enter a number:"))
+n=int(input("Enter a number:"))
 
-# if Check_prime(n):
-#     print(n)
-# else:
-#     left=n-1
-#     right=n+1
-#     while True:
-#         if Check_prime(left):
-#             print(left)
-#             break
-#         if Check_prime(right):
-#             print(right)
-#             break
-#         left-=1
-#         right+=1
+if Check_prime(n):
+    print(n)
+else:
+    left=n-1
+    right=n+1
+    while True:
+        if Check_prime(left):
+            print(left)
+            break
+        if Check_prime(right):
+            print(right)
+            break
+        left-=1
+        right+=1
 
 # OUTPUT:
 # Enter a number:13
