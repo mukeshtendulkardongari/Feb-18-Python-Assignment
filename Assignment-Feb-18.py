@@ -56,8 +56,8 @@ for i in range(1,n+1):
 
 n=int(input("Enter n value:"))
 for i in range(1,n+1):
-    for j in range(1,n*2):
-        if i==1 or j==1 or i==n or j==(n*2-1):
+    for j in range(1,n*2+1):
+        if i==1 or j==1 or i==n or j==(n*2):
             print("*",end=" ")
         else:
             print(" ",end=" ")
@@ -65,11 +65,11 @@ for i in range(1,n+1):
 
 # OUTPUT:
 # Enter n value:5
-# * * * * * * * * * 
-# *               * 
-# *               * 
-# *               * 
-# * * * * * * * * *
+# * * * * * * * * * * 
+# *                 * 
+# *                 * 
+# *                 * 
+# * * * * * * * * * *
 
 #Nearest prime number
 
@@ -105,3 +105,4 @@ else:
 # 13
 # Enter a number:16
 # 17
+
